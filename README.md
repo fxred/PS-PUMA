@@ -15,5 +15,7 @@
 ## Frameworks, bibliotecas, linguagens e ambientes utilizados:
 
 Frontend: VueJS
+
 Backend: JavaScript com ExpressJS e NodeJS
+
 Database: SQLite3
