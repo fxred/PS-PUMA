@@ -1,0 +1,21 @@
+{
+  "name": "ps-puma-2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "pg": "^8.11.0",
+    "sequelize": "^6.32.0",
+    "sqlite3": "^5.1.6",
+    "vue": "^3.3.4"
+  }
+}
