@@ -11,6 +11,7 @@
 6. instale o CORS na raiz do diretório `backend` do projeto por meio do comando `npm install cors`;
 7. feito isso, navegue até o diretório `backend` do projeto e rode o serviço executando `node server.js` no terminal;
 8. rode o frontend navegando até o diretório `frontend` e executando o comando `npm run serve` no terminal.
+9. a aplicação estará disponível para acesso local no endereço http://localhost:8080/
 
 ## Frameworks, bibliotecas, linguagens e ambientes utilizados:
 
