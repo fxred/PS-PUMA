@@ -23,6 +23,7 @@ const sequelize = new Sequelize({
     });
 
 const User = sequelize.define('User', {
+  
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -42,6 +43,10 @@ const User = sequelize.define('User', {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    starred: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
   });
   
 User.sync();
@@ -49,10 +54,11 @@ User.sync();
 app.use(express.json());
 
 app.post('/users', async (req, res) => {
+
     const { username } = req.body;
     
-  
     try {
+
       const response = await axios.get(`https://api.github.com/users/${username}`);
       const user = response.data;
   
@@ -70,6 +76,7 @@ app.post('/users', async (req, res) => {
 });
 
 app.delete('/users/:username', async (req, res) => {
+
   const username = req.params.username;
 
   User.destroy({
@@ -87,6 +94,7 @@ app.delete('/users/:username', async (req, res) => {
   });
 
 app.get('/users', async (req, res) => {
+
     try {
       const users = await User.findAll();
   

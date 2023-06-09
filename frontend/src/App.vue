@@ -50,9 +50,7 @@ export default {
         else {
           const response = await axios.post('/users', { username: this.username });
           const user = response.data;
-
           this.users.push(user);
-
           this.username = '';
         }
         
@@ -64,20 +62,10 @@ export default {
     deleteUser(username) {
     axios
       .delete(`/users/${username}`)
-      // .then(() => {
-      //   this.users = this.users.filter((user) => user.username !== username);
-      // })
-      // .catch((error) => {
-      //   console.error(error);
-      // });
     },
     getUserProfileUrl(username) {
       return `https://github.com/${username}`;
     },
-
-    
-
-
   },
 };
 </script>
